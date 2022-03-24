@@ -58,7 +58,6 @@ $font-one: 'Rubik', sans-serif;
   height: 50px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  border: 2px white solid;
   margin: auto 1rem auto;
 }
 .menu-button-burger {
@@ -85,4 +84,53 @@ $font-one: 'Rubik', sans-serif;
 }
 .menu-button-burger::after {
   transform: translateY(16px);
+}
+
+.menu-button-open{
+  background: transparent;
+  width: 40px;
+  height: 6px;
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px;
+}
+.menu-button-open::before {
+  transform: rotate(-45deg) translate(1px, 1px);
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  background : $colour-two;
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px;
+}
+.menu-button-open::after {
+  transform: rotate(45deg) translate(1px, -1px);
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  background : $colour-two;
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px;
+}
+
+/*-----------------Pop Out Menu------------------------*/
+
+.pop-out-menu {
+  position: absolute;
+  margin-left: 50px;
+  background: $colour-two;
+  margin-left: auto;
+  width: 100%;
+  opacity: 80%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.pop-out-item {
+  font-family: $font-one;
+  color: $main-col;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 25px auto;
 }
