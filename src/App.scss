@@ -24,6 +24,8 @@ $font-one: 'Rubik', sans-serif;
 
 /*---------------header styles----------*/
 .header{
+  z-index: 1;
+  padding: 0 0.25rem;
   color: $main-text-col;
   justify-content: space-around;
 }
@@ -42,7 +44,7 @@ $font-one: 'Rubik', sans-serif;
   color: $colour-two;
   width:2rem;
   height: 2rem;
-  margin: auto 0 auto 1rem;
+  margin: auto 0 auto ;
 }
 .underline{
   min-height: 2px;
@@ -58,7 +60,8 @@ $font-one: 'Rubik', sans-serif;
   height: 50px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  margin: auto 1rem auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .menu-button-burger {
   width: 40px;
@@ -115,16 +118,28 @@ $font-one: 'Rubik', sans-serif;
 }
 
 /*-----------------Pop Out Menu------------------------*/
-
-.pop-out-menu {
+.pop-out-menu-closed {
   position: absolute;
+  transform: translateX(-500px);
   margin-left: 50px;
-  background: $colour-two;
+  background: $main-text-col;
   margin-left: auto;
   width: 100%;
   opacity: 80%;
   padding-top: 20px;
   padding-bottom: 20px;
+  transition: all 0.5s ease-in-out;
+}
+.pop-out-menu-open {
+  position: absolute;
+  margin-left: 50px;
+  background: $main-text-col;
+  margin-left: auto;
+  width: 100%;
+  opacity: 80%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: all 0.5s ease-in-out;
 }
 .pop-out-item {
   font-family: $font-one;
@@ -133,4 +148,11 @@ $font-one: 'Rubik', sans-serif;
   font-size: 1.5rem;
   text-align: center;
   margin: 25px auto;
+  border-bottom: solid 2px $colour-two;
+  opacity: 95%;
+}
+.pop-out-item:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  opacity: 100%;
 }
