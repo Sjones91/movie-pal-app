@@ -14,6 +14,9 @@ $font-one: 'Rubik', sans-serif;
   display: flex;
   flex-direction: column;
 }
+.jc-center {
+  justify-content: center;
+}
 .main-section {
   min-height: 100vh;
   margin: 0;
@@ -120,12 +123,12 @@ $font-one: 'Rubik', sans-serif;
 /*-----------------Pop Out Menu------------------------*/
 .pop-out-menu-closed {
   position: absolute;
-  transform: translateX(-500px);
+  transform: translateX(-2000px);
   margin-left: 50px;
   background: $main-text-col;
   margin-left: auto;
   width: 100%;
-  opacity: 80%;
+  opacity: 95%;
   padding-top: 20px;
   padding-bottom: 20px;
   transition: all 0.5s ease-in-out;
@@ -136,7 +139,7 @@ $font-one: 'Rubik', sans-serif;
   background: $main-text-col;
   margin-left: auto;
   width: 100%;
-  opacity: 80%;
+  opacity: 95%;
   padding-top: 20px;
   padding-bottom: 20px;
   transition: all 0.5s ease-in-out;
@@ -156,3 +159,60 @@ $font-one: 'Rubik', sans-serif;
   transform: scale(1.05);
   opacity: 100%;
 }
+
+/*----------------Discover Movie Page --------------------*/
+/*---------------------------Genre Selector------------*/
+.genre-selector{
+  background-color: $main-col;
+  color: $main-text-col;
+  font-family: $font-one;
+  border: none;
+  margin: 0.5rem  0 0.5rem 0.5rem;
+}
+.genre-item {
+  padding-top: 10px;
+}
+
+
+
+
+/*----------------------------Page Layout--------------------*/
+.movie-list {
+  margin: 30px 20px 10px;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+.movie-item{
+  font-family: $font-one;
+  color: $main-text-col;
+  background-color: #2b6f70;
+  width:150px;
+  margin: 10px;
+}
+.movie-item img {
+  max-height: 180px;
+}
+.movie-details h2{
+ padding: 2px;
+}
+.movie-details {
+  padding: 5px;
+}
+.rating-div {
+  margin: auto;
+}
+.rating {
+  font-size: 1.45rem;
+  margin: auto;
+}
+
+
+
+/*---------------Media Queries-----------------*/
+// @media screen and (min-width: 720px) {
+//   .movie-list {
+//     justify-content: flex-start;
+//   }
+// }

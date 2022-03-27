@@ -1,13 +1,18 @@
 import React from 'react'
-import interstella from "./images/interstella.jpg"
+import MovieItem from './sub-components/movie-item';
+import GenreSelector from './sub-components/GenreSelector';
 function DiscoverMovie() {
     return (
-        <section>
-            <ul>
-                <li>
-                    <img src={interstella}></img>
-                    <h3>Interstella</h3>
-                </li>
+        <section className='d-f-col'>
+            <GenreSelector/>
+            <ul className='movie-list'>
+                 <MovieItem/>
+                 <MovieItem/>
+                 <MovieItem/>
+                 <MovieItem/>
+                 <MovieItem/>
+                 <MovieItem/>
+
             </ul>
 
         </section>
