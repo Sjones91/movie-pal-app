@@ -1,19 +1,18 @@
 import React from 'react'
 import interstella from "../images/interstella.jpg"
-function MovieItem() {
+import defaultMovie from "../images/defaultMovie.jpg"
+function MovieItem(props) {
+    const {title, poster_path, release_date} = props
     return (
     <li className='d-f-col movie-item'>
-        <img src={interstella}></img>
+        <img src={poster_path != null? `https://image.tmdb.org/t/p/w500${poster_path}` : defaultMovie}></img>
         <div className='d-f-row movie-details'>
             <div className='d-f-col'>
-                <h2>Interstellar</h2>
-                <h2>Sci-fi</h2>
-                <h2>Year: 2014</h2>
+                <h2>{title}</h2>
+                <h2>Release Date:</h2>
+                <h2>{release_date}</h2>
             </div>
-            <div className='d-f-col rating-div'>
-                <h3 className='rating'>7.2</h3>
-                <h3 className='rating'>/10</h3>
-            </div>
+            
         </div>
     </li>
     )
