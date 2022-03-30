@@ -161,6 +161,13 @@ $font-one: 'Rubik', sans-serif;
 }
 
 /*----------------Discover Movie Page --------------------*/
+.loading {
+  margin: auto;
+  margin-top: 20px;
+  color: $main-text-col;
+  font-family: $font-one;
+  font-size: 3rem;
+}
 /*---------------------------Genre Selector------------*/
 .genre-selector{
   background-color: $main-col;

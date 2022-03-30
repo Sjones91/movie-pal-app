@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react"
 import React from 'react'
 import { isCompositeComponent } from "react-dom/test-utils";
 
-function GenreSelector(props, test, setTest) {
+function GenreSelector(props) {
     const genreURL = "https://api.themoviedb.org/3/genre/movie/list?api_key=e028871ecc49dd2b5147e84be898b04f&language=en-US"
     const [genres,setGenres] = useState ([]);
     const [selectedGenre,setSelectedGenre] = useState("")
@@ -21,11 +21,11 @@ function GenreSelector(props, test, setTest) {
         }
         
       }
-
+      updateGenreID();
     useEffect(()=> {
       getGenres()
       updateGenreID()
-    },[selectedGenre])
+    },[genreID])
     
   return (
     <div>

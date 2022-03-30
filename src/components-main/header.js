@@ -5,7 +5,6 @@ function Header(props,menuOpen, setMenuOpen) {
     // const [menuOpen,setMenuOpen] = useState(false)
     const menuHandler = (e)=> {
         props.setMenuOpen(!props.menuOpen)
-        console.log(props.menuOpen)
     }
     
     return (
