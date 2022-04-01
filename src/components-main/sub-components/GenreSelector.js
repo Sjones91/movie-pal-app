@@ -24,7 +24,7 @@ function GenreSelector(props) {
       updateGenreID();
     useEffect(()=> {
       getGenres()
-      updateGenreID()
+      
     },[genreID])
     
   return (

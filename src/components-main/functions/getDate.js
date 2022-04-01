@@ -8,6 +8,9 @@ const buildDate = ()=> {
         month = `0${month}`
     }
     var day = currentDate.getUTCDate();
+    if (day <=9) {
+        day = `0${day}`
+    }
     let date = `${year}-${month}-${day}` 
     return date;
 }

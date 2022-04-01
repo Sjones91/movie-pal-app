@@ -168,6 +168,23 @@ $font-one: 'Rubik', sans-serif;
   font-family: $font-one;
   font-size: 3rem;
 }
+.loadMore {
+  max-width: 220px;
+  padding:10px;
+  background: $colour-two;
+  color: $main-col;
+  font-family: $font-one;
+  font-size: 2rem;
+  border-radius: 5px;
+  border: none;
+  opacity: 95%;
+  font-weight: 600;
+  margin: 10px auto;
+}
+.loadMore:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
 /*---------------------------Genre Selector------------*/
 .genre-selector{
   background-color: $main-col;
