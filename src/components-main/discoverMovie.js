@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import MovieItem from './sub-components/movie-item';
 import GenreSelector from './sub-components/GenreSelector';
 import getDate from './functions/getDate';
+
 function DiscoverMovie(props, genreID) {
     const date = getDate()
     const [loading,setLoading] =useState(true)
@@ -51,6 +52,7 @@ function DiscoverMovie(props, genreID) {
             </ul>
             }
             <button className ="loadMore"onClick={()=> setPage(page +1)}>Load More</button>
+            
         </section>
     )
 }

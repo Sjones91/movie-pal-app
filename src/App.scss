@@ -23,14 +23,33 @@ $font-one: 'Rubik', sans-serif;
   padding: 0;
   background-color: $main-col;
 }
+.to-the-top{
+  color: $colour-two;
+  opacity: 80%;
+  position: fixed;
+  bottom:20px;
+  right: 20px;
+  font-size: 3rem;
+}
+.to-the-top:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
 
 
 /*---------------header styles----------*/
 .header{
+  background-color: $main-col;
   z-index: 1;
   padding: 0 0.25rem;
   color: $main-text-col;
   justify-content: space-around;
+  position: sticky;
+}
+.sticky {
+  position:fixed;
+  top:0;
+  width: 100%;
 }
 .head-title {
   margin: 1rem auto 1rem auto;
@@ -185,6 +204,9 @@ $font-one: 'Rubik', sans-serif;
   opacity: 100%;
   cursor: pointer;
 }
+.movie-item:hover {
+  cursor:pointer;
+}
 /*---------------------------Genre Selector------------*/
 .genre-selector{
   background-color: $main-col;
@@ -202,7 +224,7 @@ $font-one: 'Rubik', sans-serif;
 
 /*----------------------------Page Layout--------------------*/
 .movie-list {
-  margin: 30px 20px 10px;
+  margin: 0px 20px 10px;
   flex-wrap: wrap;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -232,7 +254,27 @@ $font-one: 'Rubik', sans-serif;
   margin: auto;
 }
 
+/*------------------------Movie Modal----------*/
+.modal-section {
+  position: absolute;
+  background-color: rgba(#172636, 85%);
+  width: 100%;
+  min-height: 100vh;
+  justify-content: space-around;
+  margin-top: 64px;
+}
+.modal-content {
+  width: 50%;
+  margin-top: 0;
+  padding-top: 0;
+  margin: auto;
+  color: $main-text-col;
 
+}
+.modal-content img {
+  width:100%;
+  height: 300px;
+}
 
 /*---------------Media Queries-----------------*/
 // @media screen and (min-width: 720px) {
