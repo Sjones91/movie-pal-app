@@ -256,24 +256,45 @@ $font-one: 'Rubik', sans-serif;
 
 /*------------------------Movie Modal----------*/
 .modal-section {
-  position: absolute;
   background-color: rgba(#172636, 85%);
   width: 100%;
   min-height: 100vh;
   justify-content: space-around;
-  margin-top: 64px;
 }
 .modal-content {
-  width: 50%;
+  width: 60%;
   margin-top: 0;
   padding-top: 0;
+  padding-bottom: 50px;
   margin: auto;
   color: $main-text-col;
-
+}
+.modal-content h1 {
+  padding: 4px 0;
+  font-weight: 800;
+  font-size: 2rem;
+}
+.modal-content h2 {
+  color: $colour-two;
+  padding-top: 10px;
+  
+}
+.modal-content p {
+  padding-top: 7px;
+  color:rgb(197, 197, 197);
 }
 .modal-content img {
   width:100%;
   height: 300px;
+}
+.close-icon {
+  margin-left: auto;
+  margin-right: 10px;
+  color: $colour-two;
+  font-size: 1.5rem;
+}
+.close-icon:hover {
+  cursor: pointer;
 }
 
 /*---------------Media Queries-----------------*/

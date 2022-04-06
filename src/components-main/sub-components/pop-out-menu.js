@@ -1,5 +1,4 @@
 import React, { useState,useContext } from 'react'
-import menuContext from '../contexts'
 
 function PopoutMenu(props,menuOpen) {
   return (

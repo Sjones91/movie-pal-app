@@ -1,9 +1,11 @@
 import React from 'react'
-import { useEffect, useState } from 'react';
+import { useEffect, useState,createContext, } from 'react';
 import MovieItem from './sub-components/movie-item';
 import GenreSelector from './sub-components/GenreSelector';
-import getDate from './functions/getDate';
+import getDate from '../functions/getDate';
+import MovieContent from './MovieContent';
 
+export const MovieContext = React.createContext();
 function DiscoverMovie(props, genreID) {
     const date = getDate()
     const [loading,setLoading] =useState(true)
@@ -29,31 +31,19 @@ function DiscoverMovie(props, genreID) {
                 .catch(error => console.log(error))
         }
     }
-        console.log(page,movies)
     
     useEffect(()=>{
         fetchMovies()
-        console.log(page,movies)
     
     },[props.genreID, selectedGenreID,page])
 
     return (
-        <section className='d-f-col'>
-            <GenreSelector genreID={props.genreID} setGenreID={props.setGenreID}/>
-            {loading? 
-            <h1 className='d-f-r loading'>Loading...</h1>:
-            <ul className='movie-list'>
-                {movies.map((movie)=>{
-                    const {id,poster_path,title,release_date} = movie
-                    return (
-                        <MovieItem key={id} poster_path={poster_path} title={title} release_date={release_date}/>
-                    )
-                })}
-            </ul>
-            }
-            <button className ="loadMore"onClick={()=> setPage(page +1)}>Load More</button>
-            
-        </section>
+        <MovieContext.Provider value={{movies, page, setPage}}>
+            <section className='d-f-col'>
+                <GenreSelector genreID={props.genreID} setGenreID={props.setGenreID}/>
+                {loading? <h1 className='d-f-r loading'>Loading...</h1>: <MovieContent/>}
+            </section>
+        </MovieContext.Provider>
     )
 }
 
