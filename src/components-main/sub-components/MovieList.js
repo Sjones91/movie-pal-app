@@ -1,11 +1,11 @@
 import React from 'react'
 import { useContext,useState } from 'react'
 import MovieItem from './movie-item'
-import { MovieContext } from '../discoverMovie'
-
+import { PageContext } from '../discoverMovie'
+import { MovieContext } from '../../App'
 function MovieList() {
-    const {movies,page,setPage} = useContext(MovieContext)
-    
+    const {page,setPage} = useContext(PageContext)
+    const {movies,setMovies}= useContext(MovieContext)
   return (
     <section className='d-f-col'>
       <ul className='movie-list'>
