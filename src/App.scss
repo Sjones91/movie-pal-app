@@ -17,6 +17,9 @@ $font-one: 'Rubik', sans-serif;
 .jc-center {
   justify-content: center;
 }
+.jc-space-between {
+  justify-content: space-between;
+}
 
 .main-section {
   min-height: 100vh;
@@ -38,6 +41,14 @@ $font-one: 'Rubik', sans-serif;
 }
 input:focus {
   outline: none;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 
@@ -95,6 +106,9 @@ input:focus {
   margin: 0;
   padding-left: 5px;
 }
+.search-form {
+  display: none;
+}
 .search-section-open {
   margin: auto 0 auto;
   width: 2rem;
@@ -106,6 +120,9 @@ input:focus {
     display:flex;
   }
   .search-close-icon{
+    display: flex;
+  }
+  .search-form {
     display: flex;
   }
   width: 10rem;
@@ -194,6 +211,8 @@ input:focus {
 }
 
 /*-----------------Pop Out Menu------------------------*/
+
+
 .pop-out-menu-closed {
   position: absolute;
   transform: translateX(-2000px);
@@ -220,10 +239,10 @@ input:focus {
 .pop-out-item {
   font-family: $font-one;
   color: $main-col;
-  font-weight: 600;
-  font-size: 1.5rem;
+  font-weight: 500;
+  font-size: 1.25rem;
   text-align: center;
-  margin: 25px auto;
+  margin: 15px auto;
   border-bottom: solid 2px $colour-two;
   opacity: 95%;
 }
@@ -232,6 +251,87 @@ input:focus {
   transform: scale(1.05);
   opacity: 100%;
 }
+/*-----------------UserLogin---------------------------*/
+.welcomeUser {
+  margin: auto;
+  justify-content: center;
+  
+}
+.welcomeUser .icon {
+  font-size: 2.5rem;
+  color: $main-col;
+}
+.welcomeUser h1 {
+  font-size: 2.5rem;
+  font-family: $font-one;
+  font-weight: 500;
+  color: $main-col;
+  margin-left: 1rem;
+}
+.short-underline {
+  width: 50%;
+  min-height: 2px;
+  background-color: $colour-two;
+  margin: auto;
+}
+.login {
+  margin-inline: auto;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+}
+.login h2 {
+  color: $main-col;
+  font-family: $font-one;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+.login-field {
+  margin: 5px auto;
+  max-width: 50%;
+}
+.login-field input {
+  margin-top: 10px;
+  font-size: 1.25rem;
+}
+.login-field h3 {
+  margin: 10px auto;
+}
+.login-btn {
+  margin: 25px auto 10px;
+  color: $main-col;
+  background-color: $colour-two;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  min-width: 60%;
+}
+.create-account {
+  margin: 20px auto 10px;
+  color: $main-col;
+  font-family: $font-one;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.create-account:hover, .login-btn:hover, .login-field h3:hover{
+  cursor: pointer;
+}
+.form-text-input {
+  max-width: 45%;
+}
+.login-field div {
+  margin: 20px auto 5px;
+  width: 70%;
+}
+.form-warning {
+  color: rgb(175, 29, 29);
+  text-align: center;
+  font-family: $font-one;
+  font-weight: 500;
+  animation: fadeInAnimation ease 0.5s ;
+  animation-iteration-count: 1;
+}
+
 
 /*----------------Discover Movie Page --------------------*/
 .loading {
