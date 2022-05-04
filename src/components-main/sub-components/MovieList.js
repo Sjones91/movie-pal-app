@@ -25,7 +25,7 @@ function MovieList() {
                       const {id,poster_path,title,release_date,overview,vote_average} = movie
                       return (
                           <MovieItem 
-                          key={id} 
+                          id={id} 
                           poster_path={poster_path} 
                           title={title} 
                           release_date={release_date}

@@ -4,6 +4,7 @@ import { useContext,useState, createContext } from 'react'
 import { PageContext } from './discoverMovie'
 import MovieModal from './sub-components/MovieModal'
 export const ModalContext = createContext()
+
 function MovieContent() {
     const {page,setPage} = useContext(PageContext)
     const [modalSelected,setModalSelected]= useState(false)

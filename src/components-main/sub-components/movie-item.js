@@ -5,7 +5,7 @@ import defaultMovie from "../../images/defaultMovie.jpg"
 import { ModalContext } from '../MovieContent'
 
 function MovieItem(props) {
-    const {title, poster_path, release_date,overview} = props
+    const {title, poster_path, release_date,overview,id} = props
     const {modalContent,setModalContent,setModalSelected} = useContext(ModalContext)
     return (
     <li className='d-f-col movie-item' onClick={()=> {setModalContent(props); setModalSelected(true)}}>

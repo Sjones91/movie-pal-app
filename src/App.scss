@@ -21,6 +21,7 @@ $font-one: 'Rubik', sans-serif;
   justify-content: space-between;
 }
 
+
 .main-section {
   min-height: 100vh;
   margin: 0;
@@ -240,7 +241,7 @@ input:focus {
   font-family: $font-one;
   color: $main-col;
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   text-align: center;
   margin: 15px auto;
   border-bottom: solid 2px $colour-two;
@@ -250,6 +251,10 @@ input:focus {
   cursor: pointer;
   transform: scale(1.05);
   opacity: 100%;
+}
+.pop-out-menu-open ul {
+  margin-top: 20px;
+  font-weight: 600;
 }
 /*-----------------UserLogin---------------------------*/
 .welcomeUser {
@@ -331,7 +336,17 @@ input:focus {
   animation: fadeInAnimation ease 0.5s ;
   animation-iteration-count: 1;
 }
-
+.pop-out-menu-open h3 {
+  text-align: center;
+  color: rgb(33, 118, 133);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 5px auto;
+  text-decoration: underline;
+}
+.pop-out-menu-open h3:hover {
+  cursor: pointer;
+}
 
 /*----------------Discover Movie Page --------------------*/
 .loading {
@@ -449,6 +464,10 @@ input:focus {
 }
 .close-icon:hover {
   cursor: pointer;
+}
+.modal-content button {
+  justify-self: center;
+  width: 100%
 }
 
 /*---------------Media Queries-----------------*/
