@@ -74,6 +74,9 @@ input:focus {
   font-weight: 600;
   letter-spacing: 0.5px;
 }
+.head-title:hover {
+  cursor: pointer;
+}
 .pal-span {
   color: #5ecfd3;
   font-weight: 900;
@@ -227,6 +230,7 @@ input:focus {
   transition: all 0.5s ease-in-out;
 }
 .pop-out-menu-open {
+  z-index: 1;
   position: absolute;
   margin-left: 50px;
   background: $main-text-col;

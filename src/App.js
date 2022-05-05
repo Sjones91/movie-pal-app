@@ -6,7 +6,7 @@ import { useState,useEffect,} from 'react';
 import React from 'react';
 import DiscoverMovie from "./components-main/discoverMovie.js";
 import { BsArrowUpCircleFill } from "react-icons/bs";
-
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 export const MovieContext = React.createContext()
 export const loginContext = React.createContext()
 function App() {
@@ -17,7 +17,9 @@ function App() {
   const [movies,setMovies] = useState([]);
   //state values
   const [genreID,setGenreID] = useState()
-  const [loading,setLoading] = useState(true)
+  const [loading,setLoading] = useState(true);
+  //navigation states
+  const [pageRoute,setPageRoute]= useState("watchList")
   useEffect(()=>{
 
   },[loading])
@@ -41,20 +43,22 @@ function App() {
   }
 
   return (
-    <loginContext.Provider value={{loginStatus,setLoginStatus, user, setUser}}>
-      <MovieContext.Provider value={{movies,setMovies,loading,setLoading,genreID,setGenreID}}>
-        <div className='d-f-col'>      
-              <section className="main-section">
-                <Header className="header"/>
-                <DiscoverMovie genreID={genreID} setGenreID={setGenreID}/>
-              </section>
-            {showButton && 
-              <BsArrowUpCircleFill onClick={scrollToTop} className='to-the-top'/>
-            }
-            
-          </div>
-      </MovieContext.Provider>
-      </loginContext.Provider>
+    
+        <loginContext.Provider value={{loginStatus,setLoginStatus, user, setUser}}>
+          <MovieContext.Provider value={{movies,setMovies,loading,setLoading,genreID,setGenreID,pageRoute,setPageRoute}}>
+            <div className='d-f-col'>      
+                  <section className="main-section">
+                    <Header className="header"/>
+                    <DiscoverMovie genreID={genreID} setGenreID={setGenreID}/>
+                  </section>
+                {showButton && 
+                  <BsArrowUpCircleFill onClick={scrollToTop} className='to-the-top'/>
+                }
+                
+              </div>
+          </MovieContext.Provider>
+        </loginContext.Provider>
+      
   );
 }
 
